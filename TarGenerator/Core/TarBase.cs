@@ -6,7 +6,7 @@ namespace TarGenerator.Core
     public abstract partial class TarBase(Stream baseStream) : IDisposable
     {
         protected readonly Stream BaseStream = baseStream ?? throw new ArgumentNullException(nameof(baseStream));
-        protected bool IsDisposed = false;
+        protected bool IsDisposed;
 
         public void Dispose()
         {
